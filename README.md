@@ -38,3 +38,19 @@ Gets all but the first element of array.
 _.last(array)
 
 Gets the last element of array.
+
+_.initial(array)
+
+Gets all but the last element of array.
+
+_.fill(array, value)
+
+Fills all elements of array with value.
+
+_.nth(array, n)
+
+Gets the element at index n of array. If n is negative, the nth element from the end is returned. 1-indexed.
+
+_.head(array)
+
+Gets the first element of array.
