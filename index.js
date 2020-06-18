@@ -33,6 +33,10 @@ exports.take = function (array, takeNum) {
 exports.last = function (array) {
     return array[array.length - 1];
 }
+
+exports.head = function (array) {
+    return array[0];
+}
 //console.log("last([1, 2, 3, 4])");
 //console.log(last([1, 2, 3, 4]));
 exports.reverse = function (array) {
@@ -53,3 +57,25 @@ exports.fromPairs = function (array) {
 }
 //console.log("fromPairs([['a', 1], ['b', 2]])");
 //console.log(fromPairs([['a', 1], ['b', 2]]));
+
+exports.nth = function (array, n) {
+    if(n < 0){
+        n = array.length - Math.abs(n);
+    }
+    else{
+        n = n - 1;
+    }
+
+    return array[n];
+}
+
+exports.fill = function(array, val){
+    for(let i = 0; i < array.length; i++){
+        array[i] = val;
+    }
+    return array;
+}
+
+exports.initial = function(array){
+    return array.slice(0, array.length - 1);
+}
